@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/appLayout">
+
+    <LinearLayout
+        android:id="@+id/flagIconsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space style="@style/spaceStyle" />
+
+        <ImageView
+            android:id="@+id/georgiaIcon"
+            style="@style/flagIconStyle"
+            app:srcCompat="@drawable/georgia" />
+
+        <Space style="@style/spaceStyle" />
+
+        <ImageView
+            android:id="@+id/britainIcon"
+            style="@style/flagIconStyle"
+            app:srcCompat="@drawable/uk" />
+
+        <Space style="@style/spaceStyle" />
+
+        <ImageView
+            android:id="@+id/jamaicaIcon"
+            style="@style/flagIconStyle"
+            app:srcCompat="@drawable/jamaica" />
+
+        <Space style="@style/spaceStyle" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_32"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="@dimen/unit_weight"
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:orientation="horizontal"
+        android:background="@color/tab_bar_color">
+
+        <ImageButton
+            android:id="@+id/todayButton"
+            style="@style/menuIconStyle"
+            app:srcCompat="@drawable/today" />
+
+        <ImageButton
+            android:id="@+id/hourlyButton"
+            style="@style/menuIconStyle"
+            app:srcCompat="@drawable/hourly" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
